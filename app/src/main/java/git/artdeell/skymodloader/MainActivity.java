@@ -121,6 +121,9 @@ public class MainActivity extends Activity {
 
             ElfLoader loader = new ElfLoader(libPath + ":/system/lib64");
             loader.loadLib("libBootloader.so");
+            
+            // Load Canvas native libraries (ktx_read must be loaded before ciphered)
+            System.loadLibrary("ktx_read");
             System.loadLibrary("ciphered");
 
             setDeviceInfoNative(
