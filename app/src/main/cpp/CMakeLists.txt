@@ -63,7 +63,3 @@ target_link_libraries( # Specifies the target library.
         android
         shadowhook::shadowhook
 )
-
-# Install the imported libktx_read.so so it gets packaged into the APK
-install(FILES ${CMAKE_SOURCE_DIR}/Utils/ktx/libktx_read.so
-        DESTINATION ${CMAKE_INSTALL_PREFIX}/${ANDROID_ABI})
